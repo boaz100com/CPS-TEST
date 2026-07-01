@@ -1,0 +1,37 @@
+title {
+    justify-content: center;
+    align-items: center;
+    background-color: #daf5e2;    
+}
+body {
+    background-color: #f0df4f;
+    color: #166534;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container{
+    background: rgb(186, 241, 243);
+    padding: 20px;
+    box-shadow: 0 10px rgba(71, 66, 66, 0.1);
+    border-radius: 20px;
+    text-align: center;
+}
+
+#CPS{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 200px;
+    /* right: 100px; */
+}
+#Time{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 350px;
+    /* right: 130px; */
+}
