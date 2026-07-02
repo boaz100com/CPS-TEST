@@ -29,9 +29,21 @@ function startGame(){
                 title.innerText = "YOUR RANK IS RABBIT \uD83D\uDC30";
             } else if(cps<=9 && cps>7){
                 title.innerText = "YOUR RANK IS BUFFALO \uD83D\uDC03";
-            } else if(cps>9){
+            } else if(cps>9&& cps<=11){
                 title.innerText = "YOUR RANK IS CHEETAH \uD83D\uDC06";
+            } else if(cps>11&& cps<=13){
+                title.innerText = "YOUR RANK IS FALCON \uD83E\uDD85";
+            } else if(cps<13 &&cps>=11){
+                title.innerText = "YOUR RANK IS CAR \uD83D\uDE97\uD83D\uDCA8";
+            } else if(cps>=13&&cps<20){
+            title.innerText = "YOUR RANK IS FORMULA 1 \uD83C\uDFCE\uFE0F\uD83C\uDFC1"; 
+            } else if(cps>=20&&cps<50){
+            title.innerText = "YOUR RANK IS ROCKET \uD83D\uDE80"; 
+            }else if(cps>=50){
+            title.innerText = "YOUR RANK IS AUTO CLICKER \uD83D\uDDB1\uFE0F"; 
             }
+    
+
             title.style.color = "red";
             clearInterval(timerId);
             return;
