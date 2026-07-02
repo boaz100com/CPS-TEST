@@ -57,7 +57,11 @@ function startGame(){
 
     document.addEventListener('click', (e) => {
         if(s >0 && (S-s) >0){
-            C = C + 1;
+            if (event.touches.length >= 2) {
+                C = C+1
+            } else{
+                C = C + 1;
+            }
         }
         else {
             return;
