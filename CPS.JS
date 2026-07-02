@@ -60,7 +60,7 @@ function startGame(){
             if (event.touches.length >= 2) {
                 C = C+1
             } else{
-                C = C + 1;
+                C = C;
             }
         }
         else {
