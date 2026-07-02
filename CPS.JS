@@ -7,11 +7,11 @@ function startGame(){
     let title = document.getElementById("title");
     let cps = 0;
 
-    let timerId = setInterval(time, 200);
+    let timerId = setInterval(time, 50);
     function time(){
         title.innerText = "CLICK FASTER!!!";
         title.style.color = "green";
-        s = s+0.2;
+        s = s+0.05;
         cps = (C / s);
         CPS.textContent = cps;
         let TimeLeft = S-s;
@@ -57,11 +57,7 @@ function startGame(){
 
     document.addEventListener('click', (e) => {
         if(s >0 && (S-s) >0){
-            if (event.touches.length >= 2) {
-                C = C+1
-            } else{
-                C = C;
-            }
+            C = C+1;
         }
         else {
             return;
@@ -70,9 +66,11 @@ function startGame(){
 
     document.addEventListener('touchstart', (e) => {
         if(s >0 && (S-s) >0){
-            C = C + 1;
-        }
-        else {
+            if (event.touches.length >= 2) {
+                C = C;
+            } else{
+                C = C + 1;
+            }
             return;
         }
     });
