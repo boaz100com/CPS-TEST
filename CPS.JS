@@ -12,13 +12,26 @@ function startGame(){
         title.innerText = "CLICK FASTER!!!";
         title.style.color = "green";
         s = s+0.2;
+        cps = (C / s);
+        CPS.textContent = cps;
         let TimeLeft = S-s;
         let TimeLeftR = Math.round(TimeLeft)
         if (TimeLeft >= 0){
             Time.textContent = TimeLeftR;
         }
         else{
-            title.innerText = "STOP CLICKING";
+            cps = parseFloat(cps);
+            if(cps<=3){
+                title.innerText = "YOUR RANK IS TURTLE \uD83D\uDC22";
+            } else if( cps<=5 && cps>3){
+                title.innerText = "YOUR RANK IS PANDA \uD83D\uDC3C";
+            } else if(cps<=7 && cps>5){
+                title.innerText = "YOUR RANK IS RABBIT \uD83D\uDC30";
+            } else if(cps<=9 && cps>7){
+                title.innerText = "YOUR RANK IS BUFFALO \uD83D\uDC03";
+            } else if(cps>9){
+                title.innerText = "YOUR RANK IS CHEETAH \uD83D\uDC06";
+            }
             title.style.color = "red";
             clearInterval(timerId);
             return;
@@ -33,8 +46,6 @@ function startGame(){
     document.addEventListener('click', (e) => {
         if(s >0 && (S-s) >0){
             C = C + 1;
-            let cps = (C / s);
-            CPS.textContent = cps;
         }
         else {
             return;
@@ -44,8 +55,6 @@ function startGame(){
     document.addEventListener('touchstart', (e) => {
         if(s >0 && (S-s) >0){
             C = C + 1;
-            let cps = (C / s);
-            CPS.textContent = cps;
         }
         else {
             return;
